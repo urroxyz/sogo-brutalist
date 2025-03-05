@@ -40,3 +40,5 @@ Restart your browser and clear the cache.
 
 ## Configuration
 Please create a pull request if you have any suggestions and I will commit it.
+
+If you would rather that I make the changes, create an issue and let me know which element (via `class`, `id`, etc.) and your suggestions.
