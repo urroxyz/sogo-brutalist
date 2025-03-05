@@ -1,27 +1,191 @@
 @import url("https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Make the checkbox and selection indicators black on white background */
-.md-secondary.sg-avatar-selectable:hover::before,
+/* Target the preferences menu specifically */
+md-content[md-scroll-y] > md-list md-list-item {
+    /* Default state: black background with light grey text */
+    background-color: #000000 !important;
+    color: #BBBBBB !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Selected state for preferences menu items */
+md-content[md-scroll-y] > md-list md-list-item.md-default-theme.md-background.md-bg.md-hue-1 {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+/* Text color for unselected items */
+md-content[md-scroll-y] > md-list md-list-item .sg-item-name {
+    color: #BBBBBB !important;
+}
+
+/* Text color for selected items */
+md-content[md-scroll-y] > md-list md-list-item.md-default-theme.md-background.md-bg.md-hue-1 .sg-item-name {
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+/* Icons color for unselected items */
+md-content[md-scroll-y] > md-list md-list-item md-icon.material-icons {
+    color: #BBBBBB !important;
+}
+
+/* Icons color for selected items */
+md-content[md-scroll-y] > md-list md-list-item.md-default-theme.md-background.md-bg.md-hue-1 md-icon.material-icons {
+    color: #000000 !important;
+}
+
+/* Add hover effect for unselected items */
+md-content[md-scroll-y] > md-list md-list-item:not(.md-default-theme.md-background.md-bg.md-hue-1):hover {
+    background-color: #222222 !important;
+}
+
+/* Ensure the content with this specific styling is limited to the preferences menu */
+md-content[md-scroll-y] > div.md-subheader[role="heading"]:has(+ md-list md-list-item) + md-list md-list-item {
+    /* Additional specificity to avoid conflicts */
+}}
+
+/* Make enabled toolbar icons light grey */
+.md-toolbar-tools.sg-toolbar-group-last .md-icon-button:not([disabled]) md-icon.material-icons {
+    color: #BBBBBB !important; /* Light grey for enabled icons */
+}
+
+/* Add hover effect for better user experience */
+.md-toolbar-tools.sg-toolbar-group-last .md-icon-button:not([disabled]):hover md-icon.material-icons {
+    color: #999999 !important; /* Slightly darker on hover */
+}
+
+/* Make disabled toolbar icons dark grey */
+.md-toolbar-tools.sg-toolbar-group-last .md-icon-button[disabled] md-icon.material-icons {
+    color: #666666 !important; /* Dark grey for disabled icons */
+}
+
+/* Ensure this applies to all icon types in the toolbar */
+.md-toolbar-tools.sg-toolbar-group-last a.md-icon-button:not([disabled]) md-icon,
+.md-toolbar-tools.sg-toolbar-group-last button.md-icon-button:not([disabled]) md-icon {
+    color: #BBBBBB !important;
+}
+
+/* Explicitly target the common icons by their aria-label */
+.md-toolbar-tools.sg-toolbar-group-last md-icon[aria-label="contacts"]:not([disabled]),
+.md-toolbar-tools.sg-toolbar-group-last md-icon[aria-label="email"]:not([disabled]),
+.md-toolbar-tools.sg-toolbar-group-last md-icon[aria-label="settings_power"]:not([disabled]),
+.md-toolbar-tools.sg-toolbar-group-last md-icon[aria-label="settings_applications"]:not([disabled]),
+.md-toolbar-tools.sg-toolbar-group-last md-icon[aria-label="help_outline"]:not([disabled]),
+.md-toolbar-tools.sg-toolbar-group-last md-icon[aria-hidden="true"]:not([disabled]) {
+    color: #BBBBBB !important;
+}
+
+/* Change toolbar icons to light grey */
+.md-toolbar-tools .sg-icon-button md-icon.material-icons {
+    color: #BBBBBB !important; /* Light grey color */
+}
+
+/* Optional hover state to improve user experience */
+.md-toolbar-tools .sg-icon-button:hover md-icon.material-icons {
+    color: #999999 !important; /* Slightly darker on hover for feedback */
+}
+
+/* Make sure this applies to all icon buttons in the toolbar */
+.md-toolbar-tools button.sg-icon-button md-icon,
+.md-toolbar-tools md-menu button.sg-icon-button md-icon {
+    color: #BBBBBB !important;
+}
+
+/* For the specific icons mentioned (search, filter_list, sort, refresh) */
+.md-toolbar-tools md-icon[aria-hidden="true"]:not(.md-menu-content md-icon) {
+    color: #BBBBBB !important;
+}
+
+/* Change new email button to white with black icon */
+.md-fab.md-accent {
+    background-color: #FFFFFF !important; 
+    color: #000000 !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
+}
+
+/* Ensure the icon inside the button is black */
+.md-fab.md-accent md-icon.material-icons {
+    color: #000000 !important;
+}
+
+/* Keep hover state clean and consistent */
+.md-fab.md-accent:hover {
+    background-color: #F5F5F5 !important; /* Light gray on hover */
+}
+
+/* Ensure ripple effect matches the new color scheme */
+.md-fab.md-accent .md-ripple-container {
+    color: rgba(0,0,0,0.1) !important;
+}
+
+/* Make default text color black in email composition */
+.ck-content p, 
+.ck-content div, 
+.ck-content span,
+.ck-editor__editable,
+.ck-editor__editable p,
+.ck-editor__editable div,
+.ck-editor__editable span,
+.ck.ck-editor__editable,
+.ck.ck-editor__editable p,
+.ck.ck-editor__editable div,
+.ck.ck-editor__editable span,
+[contenteditable="true"],
+[contenteditable="true"] p,
+[contenteditable="true"] div,
+[contenteditable="true"] span {
+    color: #000000 !important;
+}
+
+/* Make placeholder text slightly lighter but still visible */
+.ck-editor__editable.ck-editor__editable_inline.ck-blurred ::placeholder,
+.ck-editor__editable.ck-editor__editable_inline.ck-blurred .ck-placeholder {
+    color: #666666 !important;
+    opacity: 0.8;
+}
+
+/* Ensure toolbar buttons remain visible */
+.ck-toolbar button.ck-button .ck-icon * {
+    color: inherit !important;
+}
+
+/* Set the background color of editor to white for good contrast */
+.ck-editor__editable,
+.ck.ck-editor__editable,
+.ck-editor__editable.ck-editor__editable_inline,
+.ck.ck-editor__editable.ck-editor__editable_inline {
+    background-color: #ffffff !important;
+}
+
+/* Make the avatar icon hidden when selected to show the checkbox */
+.sg-avatar-selected .sg-icon-badge-container md-icon,
+.md-accent.md-bg.md-hue-2 .sg-avatar-selected .sg-icon-badge-container md-icon {
+    opacity: 0 !important;
+}
+
+/* Style for the checkbox and checkmark SVG */
 .sg-avatar-selected::before,
-.md-accent.md-bg.md-hue-2 .md-secondary.sg-avatar-selectable:hover::before,
 .md-accent.md-bg.md-hue-2 .sg-avatar-selected::before {
     border-color: #000000 !important;
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #000000 !important;
 }
 
-/* Style for the checkmark that appears when selected */
-.md-secondary.sg-avatar-selectable:hover::after,
-.sg-avatar-selected::after,
-.md-accent.md-bg.md-hue-2 .md-secondary.sg-avatar-selectable:hover::after,
-.md-accent.md-bg.md-hue-2 .sg-avatar-selected::after {
-    border-color: #000000 !important;
-}
-
-/* Ensure SVG checkmark is black */
-.md-secondary.sg-avatar-selectable svg,
+/* Apply styles directly to SVG elements inside the checkbox */
 .sg-avatar-selected svg,
-.md-accent.md-bg.md-hue-2 .md-secondary.sg-avatar-selectable svg,
-.md-accent.md-bg.md-hue-2 .sg-avatar-selected svg {
+.md-accent.md-bg.md-hue-2 .sg-avatar-selected svg,
+.sg-avatar-selected svg path,
+.md-accent.md-bg.md-hue-2 .sg-avatar-selected svg path {
+    fill: #000000 !important;
+    stroke: #000000 !important;
+}
+
+/* Target the check mark specifically if it has a specific class */
+.sg-avatar-selected .md-check-icon,
+.md-accent.md-bg.md-hue-2 .sg-avatar-selected .md-check-icon,
+.sg-avatar-selected .check-icon,
+.md-accent.md-bg.md-hue-2 .sg-avatar-selected .check-icon {
+    color: #000000 !important;
     fill: #000000 !important;
     stroke: #000000 !important;
 }
