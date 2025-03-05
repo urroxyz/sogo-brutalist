@@ -18,7 +18,7 @@ Create and populate `/opt/mailcow-dockerized/docker-compose.override.yml`:
 ```bash
 sudo nano /opt/mailcow-dockerized/docker-compose.override.yml
 ```
-<p align="center">with content</p>
+<p align="center">with the content</p>
 
 ```yml
 version: '2.1'
@@ -32,12 +32,12 @@ services:
 ### Step 3
 Use `docker compose` or `docker-compose` to `down` and/or `up` the containers:
 ```bash
-cd /opt/mailcow-dockerized/ && sudo docker compose up -d
+cd /opt/mailcow-dockerized/ && (sudo docker-compose up -d || sudo docker compose up -d)
 ```
-<p align="center">or</p>
+<p align="center">or, if nothing happens,</p>
 
 ```bash
-cd /opt/mailcow-dockerized/ && sudo docker-compose up -d
+sudo reboot
 ```
 
 Restart your browser and clear the cache.
