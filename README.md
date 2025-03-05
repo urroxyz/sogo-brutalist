@@ -6,7 +6,7 @@ Brutalist theme for SOGo webmail client used in Mailcow: Dockerized.
 Download the theme to `/opt/mailcow-dockerized/data/conf/sogo/`:
 ``` bash
 cd /opt/mailcow-dockerized/data/conf/sogo/
-wget https://raw.githubusercontent.com/urroxyz/sogo-dark-red/main/custom-theme.css
+wget https://github.com/urroxyz/sogo-brutalist/raw/refs/heads/main/custom-theme.css
 ```
 
 ### Step 2
