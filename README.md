@@ -1,15 +1,18 @@
-# sogo-dark-red
-Dark red theme for SOGo web mail client used in mailcow dockerized
+# sogo-brutalist
+Brutalist theme for SOGo webmail client used in Mailcow: Dockerized
 
-Created by mailcow official documentation - https://docs.mailcow.email/manual-guides/SOGo/u_e-sogo/#apply-custom-sogo-theme
-
-## How to install
-Download theme to /opt/mailcow-dockerized/data/conf/sogo/
+## Installation
+1. Download theme to `/opt/mailcow-dockerized/data/conf/sogo/`:
 ``` bash
 cd /opt/mailcow-dockerized/data/conf/sogo/
 wget https://raw.githubusercontent.com/NlightN22/sogo-dark-red/main/custom-theme.css
 ```
-Update or create /opt/mailcow-dockerized/docker-compose.override.yml:
+
+2. Create `/opt/mailcow-dockerized/docker-compose.override.yml`:
+```bash
+sudo nano /opt/mailcow-dockerized/docker-compose.override.yml
+```
+
 ```yml
 version: '2.1'
 
@@ -18,20 +21,9 @@ services:
     volumes:
       - ./data/conf/sogo/custom-theme.css:/usr/lib/GNUstep/SOGo/WebServerResources/css/theme-default.css:z
 ```
-Recreate containers:
+
+3. Refresh:
 ```bash
-cd /opt/mailcow-dockerized/ && docker compose up -d
+cd /opt/mailcow-dockerized/ && sudo docker compose up -d
 ```
-Restart your browser and clear the cache `CTRL+F5`
-
-## Example
-
-![Main View](examples/Main_View.png)
-
-![Preferences](examples/Preferences.png)
-
-![Dialog window](examples/Dialog_Window.png)
-
-![Calendar](examples/Calendar.png)
-
-![Date picker](examples/Date_picker.png)
+Restart your browser and clear the cache.
