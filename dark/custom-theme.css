@@ -1,3 +1,42 @@
+/* New mid-range color for highlighting */
+:root {
+    --mid-range-color: #888888; /* A neutral mid-gray color for visual transitions */
+}
+
+/* Borders for main structural elements with no animation */
+.card, 
+.md-input-container, 
+.md-button, 
+.sg-icon-button,
+a.sg-icon-button,
+.md-virtual-repeat-scroller,
+.view-detail,
+.md-toolbar-tools,
+sg-mail-editor {
+    border: 1px solid #BBBBBB !important; /* Clear borders around cards, inputs, buttons */
+    transition: none !important; /* No transition animations */
+}
+
+/* Hover for selected menu items and input styles */
+.card:hover,
+.md-button:hover {
+    border-color: var(--mid-range-color) !important; /* Highlighting with the mid-range color */
+}
+
+/* Ensure no borders around icons and text elements */
+md-icon, 
+.md-caption, 
+.md-subheader, 
+.md-icon-button {
+    border: none !important; /* No borders for icons and text */
+}
+
+/* Clear borders for unimportant elements */
+.unimportant-border {
+    border: none !important; /* Example class to easily remove borders if needed */
+}
+
+
 @import url("https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Universal link styling */
@@ -562,3 +601,4 @@ main.view.md-default-theme.md-background.md-hue-1.md-bg {
     font-family: 'Victor Mono', monospace;
 }
 /* End Logo screen */
+
