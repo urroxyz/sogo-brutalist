@@ -6,7 +6,7 @@ Brutalist theme for [SOGo](https://github.com/Alinto/sogo) webmail client used i
 Download the theme to `/opt/mailcow-dockerized/data/conf/sogo/`:
 ``` bash
 cd /opt/mailcow-dockerized/data/conf/sogo/
-wget https://github.com/urroxyz/sogo-brutalist/raw/refs/heads/main/custom-theme.css
+wget https://raw.githubusercontent.com/urroxyz/sogo-brutalist/refs/heads/main/dark/custom-theme.css
 ```
 
 ### Step 2
