@@ -1,5 +1,5 @@
 # sogo-brutalist
-Brutalist theme for SOGo webmail client used in Mailcow: Dockerized
+Brutalist theme for SOGo webmail client used in Mailcow: Dockerized.
 
 ## Installation
 ### Step 1
