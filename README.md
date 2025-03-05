@@ -33,3 +33,6 @@ cd /opt/mailcow-dockerized/ && sudo docker-compose up -d
 ```
 
 Restart your browser and clear the cache.
+
+## Configuration
+Please create a pull request if you have any suggestions and I will commit it.
