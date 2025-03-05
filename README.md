@@ -1,6 +1,10 @@
 # SOGo Brutalist
 Brutalist theme for [SOGo](https://github.com/Alinto/sogo) webmail client used in [Mailcow: Dockerized](https://github.com/mailcow/mailcow-dockerized).
 
+## Examples
+### Inbox
+![Screenshot of inbox with SOGo Brutalist theme](./dark/examples/inbox.png)
+
 ## Installation
 ### Step 1
 Download the theme to `/opt/mailcow-dockerized/data/conf/sogo/`:
