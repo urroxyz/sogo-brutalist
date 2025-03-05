@@ -1,5 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Universal link styling */
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+    border-bottom: 1px solid #BBBBBB !important;
+    transition: border-color 0.2s ease-in-out !important;
+}
+
+/* Hover state for links */
+a:hover {
+    border-bottom: 1px solid #FFFFFF !important;
+}
+
+/* Make sure links that are buttons don't get underlines */
+a.md-button,
+.md-button a,
+button a {
+    border-bottom: none !important;
+}
+
+/* Ensure links in navigation/menus don't get underlined */
+md-list-item a,
+.md-nav-bar a,
+nav a,
+.md-toolbar-tools a,
+.md-tab a {
+    border-bottom: none !important;
+}
+
+/* If needed, restore standard appearance for special links */
+a.no-underline,
+.no-underline a {
+    border-bottom: none !important;
+}
+
 /* Target the preferences menu specifically */
 md-content[md-scroll-y] > md-list md-list-item {
     /* Default state: black background with light grey text */
