@@ -28,7 +28,8 @@ Use `docker compose` or `docker-compose` to `down` and/or `up` the containers:
 ```bash
 cd /opt/mailcow-dockerized/ && sudo docker compose up -d
 ```
-— or —
+<p align="center">or</p>
+
 ```bash
 cd /opt/mailcow-dockerized/ && sudo docker-compose up -d
 ```
