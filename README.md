@@ -29,7 +29,7 @@ Use `docker compose` or `docker-compose` to `down` and/or `up` the containers:
 cd /opt/mailcow-dockerized/ && sudo docker compose up -d
 ```
 ```bash
-cd /opt/mailcow-dockerized/ && sudo-docker compose up -d
+cd /opt/mailcow-dockerized/ && sudo docker-compose up -d
 ```
 
 Restart your browser and clear the cache.
