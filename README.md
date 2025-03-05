@@ -3,7 +3,7 @@ Brutalist theme for [SOGo](https://github.com/Alinto/sogo) webmail client used i
 
 ## Examples
 ### Inbox
-![Screenshot of inbox with SOGo Brutalist theme](./dark/examples/inbox.png)
+![Screenshot of inbox with SOGo Brutalist theme](/dark/examples/inbox.png)
 
 ## Installation
 ### Step 1
