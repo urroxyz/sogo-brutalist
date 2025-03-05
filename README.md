@@ -14,6 +14,8 @@ Create and populate `/opt/mailcow-dockerized/docker-compose.override.yml`:
 ```bash
 sudo nano /opt/mailcow-dockerized/docker-compose.override.yml
 ```
+<p align="center">with content</p>
+
 ```yml
 version: '2.1'
 
