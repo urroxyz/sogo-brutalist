@@ -1,4 +1,4 @@
-# sogo-brutalist
+# SOGo Brutalist
 Brutalist theme for [SOGo](https://github.com/Alinto/sogo) webmail client used in [Mailcow: Dockerized](https://github.com/mailcow/mailcow-dockerized).
 
 ## Installation
