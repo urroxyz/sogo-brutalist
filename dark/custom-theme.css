@@ -1,3 +1,26 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 1rem; /* Adjust for desired thickness */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  border: 0.0625rem solid var(--light-grey); /* Use your standard border */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--mid-range-color); /* Mid color on hover */
+  border-color: var(--mid-range-color); /* Use your standard hover border */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--white); /* White when active */
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
@@ -78,7 +101,7 @@ a.sg-icon-button,
 .md-virtual-repeat-scroller,
 .view-detail,
 .md-toolbar-tools,
-.md-subheader,
+.md-subheader-inner,
 sg-mail-editor {
   border: 1px solid var(--light-grey) !important;
   transition: none !important;
@@ -286,10 +309,9 @@ md-content[md-scroll-y] > md-list md-list-item:not(.md-default-theme.md-backgrou
 }
 
 /* Selected email styling */
-md-list-item.sg-message-list-item.md-default-theme.md-accent.md-bg.md-hue-2,
-md-list-item.sg-message-list-item._md-button-wrap.md-with-secondary._md.md-clickable.md-default-theme.md-accent.md-bg.md-hue-2,
-md-list-item.md-accent.md-bg.md-hue-2 {
-  background-color: var(--white) !important;
+md-list-item.sg-message-list-item._md-button-wrap._md.md-with-secondary._md.md-clickable.md-default-theme.md-accent.md-bg.md-hue-2 {
+  background-color: #101010;
+  font-family: var(--font-family);
 }
 
 /* Text and icons in selected email */
@@ -499,11 +521,6 @@ md-card-content md-chips .md-chips .md-chip-input-container input::-ms-input-pla
   font-family: var(--font-family);
 }
 
-md-card-content md-chips .md-chips .md-chip-input-container input::placeholder {
-  color: rgba(192, 192, 192, 0.7);
-  font-family: var(--font-family);
-}
-
 md-card-content
   md-chips
   .md-chips
@@ -666,10 +683,30 @@ md-dialog button.md-primary.md-button.md-default-theme.md-ink-ripple {
 /* End Logo screen */
 md-select-menu.md-default-theme md-content,
 md-select-menu md-content,
-md-menu-content {
-  background-color: var(--black);
+md-menu-content,
+.md-panel,
+.md-whiteframe-3dp {
+  background-color: transparent !important;
   font-family: var(--font-family);
 }
+
+md-menu-item .md-button {
+  background-color: var(--black) !important;
+}
+
+.md-whiteframe-3dp {
+  box-shadow: none !important;
+}
+
+md-tooltip.md-panel.md-tooltip {
+  background-color: var(--black) !important;
+  color: var(--light-grey) !important;
+  border: 0.0625rem solid var(--light-grey) !important; /* 1px border */
+  border-radius: 0 !important; /* Make it rectangular */
+  padding: 0.25rem 0.5rem !important; /* Adjust padding as needed */
+  font-family: var(--font-family);
+}
+
 md-select-menu.md-default-theme md-content md-option,
 md-select-menu md-content md-option,
 md-menu-content,
@@ -696,4 +733,26 @@ md-input-container:not(.md-input-focused):not(.md-input-invalid)
   .md-select-value
   span:first-child:after {
   color: rgba(197, 197, 197, 0.38);
+}
+
+.md-select-menu-container md-option {
+  background-color: var(--black) !important;
+  color: var(--light-grey) !important;
+  border: 0.0625rem solid var(--light-grey) !important; /* 1px border */
+  border-radius: 0 !important; /* Make it rectangular */
+  margin-bottom: 0.0625rem !important; /* Add a small margin between options */
+  font-family: var(--font-family);
+}
+
+.md-select-menu-container md-option:last-child {
+  margin-bottom: 0 !important; /* Remove margin from the last option */
+}
+
+.md-select-menu-container md-option.md-focused {
+  background-color: var(--mid-range-color) !important; /* Highlight focused option */
+}
+
+.md-select-menu-container md-option[aria-selected="true"] {
+  background-color: var(--white) !important; /* White background for selected */
+  color: var(--black) !important; /* Black text for selected */
 }
