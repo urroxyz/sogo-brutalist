@@ -1,3 +1,56 @@
+/* Outer container: Always black with normal border, centered content */
+.sg-login.md-default-theme.md-bg.md-accent.flex-gt-md-50 {
+  background-color: var(--black) !important;
+  border: 0.0625rem solid var(--light-grey) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-grey) !important;
+}
+
+/* Inner container (login content): Always white with double border */
+.sg-login-content {
+  background-color: var(--white) !important;
+  border: 0.125rem solid var(--light-grey) !important;
+}
+
+/* Ensure the form inside remains white */
+.sg-login-content form.layout-column {
+  background-color: var(--white) !important;
+}
+
+/* Force all login text, icons, select values, and switch labels to be black */
+.sg-login-content label,
+.sg-login-content md-icon,
+.sg-login-content input,
+.sg-login-content md-select-value,
+.sg-login-content md-switch .md-label {
+  color: var(--black) !important;
+}
+
+/* Underline for username/password inputs */
+.sg-login-content md-input-container .md-input {
+  border-bottom: 0.0625rem solid var(--black) !important;
+}
+
+/* Style md-switch (without hacks): set thumb to black, bar to light-grey */
+.sg-login-content md-switch .md-thumb {
+  background-color: var(--black) !important;
+}
+.sg-login-content md-switch .md-bar {
+  background-color: var(--light-grey) !important;
+}
+
+/* Ensure ripple elements remain transparent */
+.sg-ripple {
+  background-color: transparent !important;
+}
+
+/* Keep md-switch container background clear when checked */
+md-switch.md-checked .md-container {
+  background-color: transparent !important;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 1rem; /* Adjust for desired thickness */
@@ -100,6 +153,7 @@ a.no-underline,
 a.sg-icon-button,
 .md-virtual-repeat-scroller,
 .view-detail,
+.md-toolbar,
 .md-toolbar-tools,
 .md-subheader-inner,
 sg-mail-editor {
@@ -699,12 +753,16 @@ md-menu-item .md-button {
 }
 
 md-tooltip.md-panel.md-tooltip {
-  background-color: var(--black) !important;
-  color: var(--light-grey) !important;
-  border: 0.0625rem solid var(--light-grey) !important; /* 1px border */
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+  border: 0.0625rem solid var(--black) !important; /* 1px border */
   border-radius: 0 !important; /* Make it rectangular */
   padding: 0.25rem 0.5rem !important; /* Adjust padding as needed */
   font-family: var(--font-family);
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+  margin-top: -0.5rem; /* Adjust vertical position, negative value moves it up */
 }
 
 md-select-menu.md-default-theme md-content md-option,
