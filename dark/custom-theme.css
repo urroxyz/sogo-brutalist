@@ -1,17 +1,233 @@
-/* Outer container: Always black with normal border, centered content */
+md-list-item.sg-message-list-item.md-default-theme.md-accent.md-bg.md-hue-2,
+md-list-item.sg-message-list-item._md-button-wrap.md-with-secondary._md.md-clickable.md-default-theme.md-accent.md-bg.md-hue-2 {
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+}
+
+md-virtual-repeat-container.md-flex md-list md-list-item p.sg-item-name > span {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+.md-button .sg-item-name,
+a.md-button .sg-item-name,
+.md-list-item-inner .sg-item-name {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/* Unselected state: Black background, light grey border, light grey text */
+md-grid-list md-grid-tile.sg-icon-button:not(.md-accent):not(.md-bg) {
+  background-color: var(--black) !important;
+  color: var(--light-grey) !important;
+  border: 0.0625rem solid var(--light-grey) !important;
+  border-radius: 0 !important;
+}
+
+/* Selected state: White background, light grey border, black text */
+md-grid-list md-grid-tile.sg-icon-button.md-accent.md-bg {
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+  border: 0.0625rem solid var(--light-grey) !important;
+  border-radius: 0 !important;
+}
+
+/* Tooltips */
+md-tooltip {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/*Buttons everywhere except email body or email addresses*/
+.md-toolbar-tools md-button,
+.md-button.md-menu-item,
+.md-list-item.nav md-button,
+md-menu-content md-button,
+md-list-item .md-list-item-inner .sg-no-wrap,
+button.md-button,
+md-list-item button,
+md-list-item a,
+.md-subheader-inner,
+.sg-folder-name,
+.advanced-search-full > label,
+.md-list-item .sg-item-name {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/* Date in the top left toolbar */
+.sg-day,
+.sg-month,
+.sg-year,
+.sg-date-today {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/* User identification and email in the top left sidenav */
+.sg-md-title.sg-no-wrap,
+.md-caption.sg-no-wrap {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/* Section titles or labels and checkbox settings (like the Choose ... label) */
+.pseudo-input-label,
+md-subheader,
+sg-checkmark {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+
+a.md-no-style.md-button {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+
+/* Tooltips */
+md-tooltip {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/*Buttons everywhere except email body or email addresses*/
+.md-toolbar-tools md-button,
+.md-button.md-menu-item,
+.md-list-item.nav md-button,
+md-menu-content md-button,
+md-list-item .md-list-item-inner .sg-no-wrap,
+button.md-button,
+md-list-item button,
+md-list-item a,
+.md-subheader-inner,
+.sg-folder-name,
+.advanced-search-full > label {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/* Date in the top left toolbar */
+.sg-day,
+.sg-month,
+.sg-year,
+.sg-date-today {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/* User identification and email in the top left sidenav */
+.sg-md-title.sg-no-wrap,
+.md-caption.sg-no-wrap {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/* Section titles or labels and checkbox settings (like the Choose ... label) */
+.pseudo-input-label,
+md-subheader,
+sg-checkmark {
+  text-transform: lowercase !important;
+  font-variant: small-caps !important;
+}
+
+/* Tooltips */
+md-tooltip {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/*Buttons everywhere except email body or email addresses*/
+.md-toolbar-tools md-button,
+.md-button.md-menu-item,
+.md-list-item.nav md-button,
+md-menu-content md-button,
+md-list-item .md-list-item-inner .sg-no-wrap,
+button.md-button,
+md-list-item button,
+md-list-item a {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* Date in the top left toolbar */
+.sg-day,
+.sg-month,
+.sg-year,
+.sg-date-today {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* User identification and email in the top left sidenav */
+.sg-md-title.sg-no-wrap,
+.md-caption.sg-no-wrap {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* Section titles or labels and checkbox settings (like the Choose ... label) */
+.pseudo-input-label,
+md-subheader,
+sg-checkmark {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* Tooltips */
+md-tooltip {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* Toolbar button titles */
+.md-toolbar-tools md-button,
+.md-button.md-menu-item {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* Date in the top left toolbar */
+.sg-day,
+.sg-month,
+.sg-year,
+.sg-date-today {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* User identification and email in the top left sidenav */
+.sg-md-title.sg-no-wrap,
+.md-caption.sg-no-wrap {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* Section titles or labels (like the Choose ... label) */
+.pseudo-input-label,
+md-subheader {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/*Mail folder menu*/
+md-menu-content md-button{
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
 .sg-login.md-default-theme.md-bg.md-accent.flex-gt-md-50 {
   background-color: var(--black) !important;
   border: 0.0625rem solid var(--light-grey) !important;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--light-grey) !important;
+  align-items: center; /* Only Vertical center */
+  padding-left: 25px       /* padding on left */
 }
 
 /* Inner container (login content): Always white with double border */
 .sg-login-content {
   background-color: var(--white) !important;
-  border: 0.125rem solid var(--light-grey) !important;
 }
 
 /* Ensure the form inside remains white */
