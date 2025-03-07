@@ -21,8 +21,6 @@ sudo nano /opt/mailcow-dockerized/docker-compose.override.yml
 <p align="center">with the content</p>
 
 ```yml
-version: '2.1'
-
 services:
   sogo-mailcow:
     volumes:
